@@ -9,8 +9,8 @@ import { capitalizeTitles } from './LegacyModule/index.js';
   console.log('Колличество полученых данных:', posts?.data.length); 
   const filteredPosts: IPost[] = filter(posts?.data, (p: IPost) => {
  return p.userId === userId })
-  console.log('filteredPosts', filteredPosts)
-  console.log('filteredPosts.length', filteredPosts.length) // выведем вконсоли длину отфильтрованного массива, должна быть 10
+  console.log('Посты по userId', filteredPosts)
+  console.log('Колличество постов по userId', filteredPosts.length) // выведем вконсоли длину отфильтрованного массива, должна быть 10
   const test = capitalizeTitles(filteredPosts);
   console.log('test', test) // filteredPosts, где все заголовки заглавными буквами
  })()
